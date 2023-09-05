@@ -5,6 +5,7 @@ export default function Navigate() {
         <div className="Navigate-container">
             <nav>
             <Link to='/userlist' ><button className='NavigateUserList'>User-List</button></Link>
+            <Link to='/anagram' ><button className='NavigateAnagram'>Anagram Checker</button></Link>
         </nav>
         </div>
         

@@ -57,7 +57,16 @@ export default function Input({closeModal,onSubmit,defaultValue}) {
                     </div>
                     <div className="form-group">
                         <label htmlFor="phone">Phone No.</label>
-                        <input name="phone" value={formState.phone} onChange={handleChange}/>
+                        {/* <input name="phone" value={formState.phone} onChange={handleChange}/> */}
+                        <input 
+                           name="phone"
+                           value={formState.phone}
+                           onChange={handleChange}
+                           type="number"
+                           pattern="[0-9]{10}"
+                           placeholder="Enter 10-digit number"
+                           maxLength="10"
+                        />
                     </div>
                     {errors && <div className="error">{`Please include: ${errors}`}</div>}
                     <div className="">

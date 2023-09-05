@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Table from '../Table/Table';
 import Input from '../Input/Input';
 import DeletePopUp from '../Delete-PopUp/DeletePopUp';
+import {Link} from 'react-router-dom'
 
 function UserList() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -55,6 +56,10 @@ function UserList() {
 
   return (
     <>
+      <div className="Link">
+        <Link to="/home" style={{textDecoration:"none"}}><h1>Home</h1></Link>
+        <Link to="/anagram" style={{textDecoration:"none"}}><h1>Anagram</h1></Link>
+      </div>
       <div className='App'>
         <DeletePopUp
         showDeleteConfirmation={showDeleteConfirmation}
@@ -75,7 +80,8 @@ function UserList() {
           defaultValue={rowToEdit !== null && rows[rowToEdit]}
           />
         )}
-      </div>  
+        
+      </div>        
     </>
   )
 }
