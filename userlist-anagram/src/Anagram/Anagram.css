@@ -8,12 +8,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: white;
 }
 .header{
   margin-top: -90px;
   margin-bottom: 40px;
-  color: white;
+  color: black;
 }
 .Anagram-model{
   display: flex;
@@ -22,16 +22,17 @@
   flex-direction: column;
   border-radius: 5px;
   padding: 10rem;
-  
+  color: black;
   width: 39.4em;
   box-shadow: 1px 2px 20px 5px #eca2a2;
-  
+  margin: auto;
+  margin-top: 120px;
 }
 .Anagram-group{
  display: flex;
  flex-direction: column;
  margin-bottom: 1rem; 
- color: white;
+ color: black;
 }
 .Anagram-group input,
 .Anagram-group textarea {
@@ -99,9 +100,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: -100px;
-  color: white;
+  margin-top: 40px;
+  margin-bottom: -120px;
+  color: black;
   font-size: 10px;
   font-weight: 100;
 }

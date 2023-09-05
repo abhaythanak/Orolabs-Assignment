@@ -3,10 +3,10 @@ import './Navigate.css';
 export default function Navigate() {
     return(
         <div className="Navigate-container">
-            <nav>
+          <nav>
             <Link to='/userlist' ><button className='NavigateUserList'>User-List</button></Link>
             <Link to='/anagram' ><button className='NavigateAnagram'>Anagram Checker</button></Link>
-        </nav>
+          </nav>
         </div>
         
     )

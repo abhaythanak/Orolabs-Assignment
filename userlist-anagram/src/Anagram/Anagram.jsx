@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import './Anagram.css';
 
 export default function Anagram() {
@@ -33,11 +33,6 @@ export default function Anagram() {
   };
   return (
     <>
-      <div className="Link">
-        <Link to="/home" style={{textDecoration:"none"}}><h1>Home</h1></Link>
-        <Link to="/userlist" style={{textDecoration:"none"}}><h1>UserPage</h1></Link>
-      </div>
-      <div className="Anagram-container">
           <div className="Anagram-model">
             <div className="header">
             <h1>Anagram Checker</h1>
@@ -56,7 +51,6 @@ export default function Anagram() {
               </div> 
               <div className="result"><h1>{result}</h1></div>  
           </div>
-        </div>
     </>
   )
 }

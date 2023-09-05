@@ -2,7 +2,6 @@ import { useState } from 'react'
 import Table from '../Table/Table';
 import Input from '../Input/Input';
 import DeletePopUp from '../Delete-PopUp/DeletePopUp';
-import {Link} from 'react-router-dom'
 
 function UserList() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -15,9 +14,6 @@ function UserList() {
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
   const [targetIndexToDelete, setTargetIndexToDelete] = useState(null);
 
-  // const handleDeleteRow = (targetIndex) => {
-  //   setRows(rows.filter((_, idx) => idx !== targetIndex));
-  // };
   const handleDeleteRow = (targetIndex) => {
     setTargetIndexToDelete(targetIndex);
     setShowDeleteConfirmation(true);
@@ -56,10 +52,6 @@ function UserList() {
 
   return (
     <>
-      <div className="Link">
-        <Link to="/home" style={{textDecoration:"none"}}><h1>Home</h1></Link>
-        <Link to="/anagram" style={{textDecoration:"none"}}><h1>Anagram</h1></Link>
-      </div>
       <div className='App'>
         <DeletePopUp
         showDeleteConfirmation={showDeleteConfirmation}

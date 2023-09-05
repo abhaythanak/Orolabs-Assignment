@@ -2,6 +2,8 @@
 background-color: rgb(196, 248, 249);
 border-radius: 9px;
 box-shadow: 2px 2px 4px rgba(225, 81, 81, 0.847);
+margin-bottom: 190px;
+margin-top: -200px;
 }
 .custom-popup{
     display: flex;

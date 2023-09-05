@@ -57,7 +57,6 @@ export default function Input({closeModal,onSubmit,defaultValue}) {
                     </div>
                     <div className="form-group">
                         <label htmlFor="phone">Phone No.</label>
-                        {/* <input name="phone" value={formState.phone} onChange={handleChange}/> */}
                         <input 
                            name="phone"
                            value={formState.phone}

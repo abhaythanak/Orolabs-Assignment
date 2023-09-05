@@ -4,22 +4,27 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #faf9f6;
 }
+
 .btn {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   border: none;
-  background-color: #1d4ed8;
-  color: #fff;
-  padding: 0.5rem 1rem;
+  border: 2px solid #1d4ed8;
+  color: black;
+  font-weight: 800;
+  padding: 0.5rem 2rem;
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0px 5px 5px #ccc;
+}
+.btn:hover{
+  background-color: #1d4ed8;
+  color: white;
 }
 .Link{
 display: flex;
 align-items: center;
 justify-content: center;
 gap: 60px;
-margin-bottom: -150px;
+margin-top: 20px;
 }
