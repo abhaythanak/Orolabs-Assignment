@@ -1,0 +1,33 @@
+.popup{
+background-color: rgb(196, 248, 249);
+border-radius: 9px;
+box-shadow: 2px 2px 4px rgba(225, 81, 81, 0.847);
+}
+.custom-popup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    margin: 10px; 
+}
+.confirm{
+    margin: 10px;
+    padding: 7px 12px;
+    border: 2px solid red;
+    font-weight: 900;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.confirm:hover{
+    background-color: red;
+}
+.cancel{
+    padding: 7px 14px;
+    border: 2px solid rgb(159, 159, 34);
+    font-weight: 900;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cancel:hover{
+    background-color: yellowgreen;
+}

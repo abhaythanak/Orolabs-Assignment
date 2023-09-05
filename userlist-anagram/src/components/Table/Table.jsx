@@ -5,6 +5,9 @@ export default function Table({rows, handleDeleteRow, editRow}) {
     return(
     <>
         <div className="table-wrapper">
+            <div className="table-title">
+                <h1>Users List</h1>
+            </div>
             <table className="table">
                 <thead>
                     <tr>
