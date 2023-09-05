@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Table from './components/Table/Table'
 import Input from './components/Input/Input'
+import DeletePopUp from './components/Delete-PopUp/DeletePopUp';
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -11,9 +12,28 @@ function App() {
     {name: "ham", email: "ham@yahoo.com", phone: "9854561587"},
   ])
   const [rowToEdit, setRowToEdit] = useState(null);
+  const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
+  const [targetIndexToDelete, setTargetIndexToDelete] = useState(null);
 
+  // const handleDeleteRow = (targetIndex) => {
+  //   setRows(rows.filter((_, idx) => idx !== targetIndex));
+  // };
   const handleDeleteRow = (targetIndex) => {
-    setRows(rows.filter((_, idx) => idx !== targetIndex));
+    setTargetIndexToDelete(targetIndex);
+    setShowDeleteConfirmation(true);
+  };
+
+  const confirmDelete = () => {
+    if (targetIndexToDelete !== null) {
+      setRows(rows.filter((_, idx) => idx !== targetIndexToDelete));
+      setTargetIndexToDelete(null);
+      setShowDeleteConfirmation(false);
+    }
+  };
+
+  const cancelDelete = () => {
+    setTargetIndexToDelete(null);
+    setShowDeleteConfirmation(false);
   };
 
   const handleEditRow = (idx) => {
@@ -37,7 +57,14 @@ function App() {
   return (
     <>
       <div className='App'>
-        <Table rows={rows} handleDeleteRow={handleDeleteRow} editRow={handleEditRow}/>
+        <DeletePopUp
+        showDeleteConfirmation={showDeleteConfirmation}
+        cancelDelete={cancelDelete}
+        confirmDelete={confirmDelete}
+        />
+        <Table rows={rows} handleDeleteRow={handleDeleteRow} 
+        editRow={handleEditRow}
+        />
         <button onClick={() => setModalOpen(true)} className="btn">Add</button>
         {modalOpen &&
         ( <Input

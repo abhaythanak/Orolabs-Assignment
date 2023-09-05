@@ -3,6 +3,7 @@ import "./Table.css";
 
 export default function Table({rows, handleDeleteRow, editRow}) {
     return(
+    <>
         <div className="table-wrapper">
             <table className="table">
                 <thead>
@@ -29,5 +30,6 @@ export default function Table({rows, handleDeleteRow, editRow}) {
                 </tbody>
             </table>
         </div>
+    </>
     )
 }
